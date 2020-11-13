@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/layout/App';
+import 'semantic-ui-css/semantic.min.css'
 import './app/layout/styles.css'
 import reportWebVitals from './reportWebVitals';
 
@@ -8,15 +9,13 @@ const rootEl = document.getElementById('root')
 
 function render() {
     ReactDOM.render(
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>,
+        <App/>,
         rootEl
     );
 }
 
 if (module.hot) {
-    module.hot.accept('./app/layout/App', function() {
+    module.hot.accept('./app/layout/App', function () {
         setTimeout(render)
     })
 }
